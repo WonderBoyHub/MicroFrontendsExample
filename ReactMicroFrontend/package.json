@@ -1,22 +1,28 @@
 {
   "name": "reactmicrofrontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "wwwroot/dist/app.js",
-  "source": [
-    "src/index.js"
-  ],
+  "description": "React microfrontend component for MicroFrontendsExample",
+  "source": "src/index.html",
   "scripts": {
-    "build": "parcel build src/index.js",
-    "clean": "del-cli wwwroot/dist/* node_modules"
+    "build": "parcel build src/index.html --dist-dir wwwroot/dist --public-url ./",
+    "clean": "del-cli wwwroot/dist/* node_modules",
+    "start": "parcel serve src/index.html --dist-dir wwwroot/dist --port 3000 --public-url /",
+    "type-check": "tsc --noEmit",
+    "dev": "parcel watch src/index.html --dist-dir wwwroot/dist --public-url ./"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "parcel": "^2.0.1"
+    "parcel": "^2.10.3",
+    "@parcel/packager-ts": "^2.10.3",
+    "@parcel/transformer-typescript-tsc": "^2.10.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "del-cli": "^5.0.0"
   }
 }

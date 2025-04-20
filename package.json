@@ -1,0 +1,16 @@
+{
+  "name": "microfrontends-example",
+  "version": "1.0.0",
+  "description": "MicroFrontends Example with Blazor and React",
+  "private": true,
+  "workspaces": [
+    "ReactMicroFrontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=ReactMicroFrontend",
+    "start": "npm run start --workspace=ReactMicroFrontend",
+    "clean": "npm run clean --workspace=ReactMicroFrontend",
+    "type-check": "npm run type-check --workspace=ReactMicroFrontend",
+    "dev": "npm run dev --workspace=ReactMicroFrontend"
+  }
+} 

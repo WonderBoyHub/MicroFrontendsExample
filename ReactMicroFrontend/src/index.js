@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 window.renderApp = () => {
     const domElement =
@@ -7,6 +7,7 @@ window.renderApp = () => {
         document.querySelector("#react-app");
 
     if (domElement) {
-        ReactDOM.render(<h1>Hello, React🌐!</h1>, domElement);
+        const root = createRoot(domElement);
+        root.render(<h1>Hello, React🌐!</h1>);
     }
 };
